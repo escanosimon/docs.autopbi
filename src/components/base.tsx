@@ -66,7 +66,7 @@ export default function Base({ crumbs, children }: BaseProps) {
 
           <Button className="justify-self-end-safe">Download</Button>
         </header>
-        <main className="p-4 sm:p-4 md:p-6 lg:p-8">
+        <main className="flex flex-col p-6 sm:p-6 md:p-8 lg:p-12">
           {children}
         </main>
       </SidebarInset>
