@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/sidebar"
 import React from "react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 interface BaseProps {
   crumbs: {
@@ -64,7 +65,9 @@ export default function Base({ crumbs, children }: BaseProps) {
             </Breadcrumb>
           </div>
 
-          <Button className="justify-self-end-safe">Download</Button>
+          <Button className="justify-self-end-safe">
+            <Link href="https://github.com/escanosimon/AutoPBI/releases/">Download AutoPBI</Link>
+          </Button>
         </header>
         <main className="flex flex-col p-6 sm:p-6 md:p-8 lg:p-12">
           {children}

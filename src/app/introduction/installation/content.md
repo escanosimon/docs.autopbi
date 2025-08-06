@@ -11,7 +11,7 @@ Before installing AutoPBI, ensure you have the following:
    - Verify installation by running `dotnet --version` in Command Prompt
 
 2. **MicrosoftPowerBIMgmt PowerShell Module**
-   - Open PowerShell as Administrator
+   - Open PowerShell
    - Run the following command:
    ```powershell
    Install-Module -Name MicrosoftPowerBIMgmt
@@ -21,8 +21,7 @@ Before installing AutoPBI, ensure you have the following:
 ## Download and Install AutoPBI
 
 1. **Download the Application**
-   - Click the button below to redirect to the latest release on GitHub
-   - Download the portable ZIP file from the releases page
+   - Download the portable ZIP file from the [releases page](https://github.com/escanosimon/AutoPBI/releases/)
 
 2. **Extract the Files**
    - Extract the downloaded ZIP file to a folder of your choice
@@ -44,10 +43,8 @@ Before installing AutoPBI, ensure you have the following:
 **Issue: Application won't start**
 - Ensure .NET 9.0+ is installed
 - Check if all files were extracted properly
-- Try running as Administrator
 
 **Issue: PowerShell module not found**
-- Run PowerShell as Administrator
 - Execute: `Get-Module -ListAvailable -Name MicrosoftPowerBIMgmt`
 - If not found, reinstall using: `Install-Module -Name MicrosoftPowerBIMgmt -Force`
 

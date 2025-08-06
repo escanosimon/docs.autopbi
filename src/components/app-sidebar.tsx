@@ -90,15 +90,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const pathName = usePathname();
 
   return (
-    <Sidebar {...props}>
-      <SidebarHeader>
+    <Sidebar className="max-w-58" {...props}>
+      <SidebarHeader className="p-2">
         <VersionSwitcher
           versions={data.versions}
           defaultVersion={data.versions[0]}
         />
         {/* <SearchForm /> */}
       </SidebarHeader>
-      <SidebarContent>
+      <SidebarContent className="p-2">
         {/* We create a SidebarGroup for each parent. */}
         {data.navMain.map((item) => (
           <SidebarGroup key={item.title}>
