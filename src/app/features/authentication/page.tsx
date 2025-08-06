@@ -9,7 +9,9 @@ const Authentication = () => {
         {name: "Authentication"}
       ]
     }>
-      Bruh
+      <h3 className='font-medium text-xl sm:text-xl md:text-2xl lg:text-3xl'>
+        Authentication
+      </h3>
     </Base>
   )
 }

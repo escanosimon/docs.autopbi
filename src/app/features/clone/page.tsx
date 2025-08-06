@@ -9,7 +9,9 @@ const Clone = () => {
         {name: "Bulk Clone"}
       ]
     }>
-      Bruh
+      <h3 className='font-medium text-xl sm:text-xl md:text-2xl lg:text-3xl'>
+        Bulk Clone
+      </h3>
     </Base>
   )
 }

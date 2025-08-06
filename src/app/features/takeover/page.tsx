@@ -9,7 +9,9 @@ const Takeover = () => {
         {name: "Bulk Takeover"}
       ]
     }>
-      Bruh
+      <h3 className='font-medium text-xl sm:text-xl md:text-2xl lg:text-3xl'>
+        Bulk Takeover
+      </h3>
     </Base>
   )
 }

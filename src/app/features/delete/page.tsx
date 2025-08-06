@@ -9,7 +9,9 @@ const Delete = () => {
         {name: "Bulk Delete"}
       ]
     }>
-      Bruh
+      <h3 className='font-medium text-xl sm:text-xl md:text-2xl lg:text-3xl'>
+        Bulk Delete
+      </h3>
     </Base>
   )
 }

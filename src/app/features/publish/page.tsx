@@ -9,7 +9,9 @@ const Publish = () => {
         {name: "Bulk Publish"}
       ]
     }>
-      Bruh
+      <h3 className='font-medium text-xl sm:text-xl md:text-2xl lg:text-3xl'>
+        Bulk Publish
+      </h3>
     </Base>
   )
 }

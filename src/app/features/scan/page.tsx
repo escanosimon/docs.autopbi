@@ -9,7 +9,9 @@ const Scan = () => {
         {name: "Bulk Scan"}
       ]
     }>
-      Bruh
+      <h3 className='font-medium text-xl sm:text-xl md:text-2xl lg:text-3xl'>
+        Bulk Scan
+      </h3>
     </Base>
   )
 }

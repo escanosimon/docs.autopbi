@@ -9,7 +9,9 @@ const Page = () => {
         {name: "Installation"}
       ]
     }>
-      Bruh
+      <h3 className='font-medium text-xl sm:text-xl md:text-2xl lg:text-3xl'>
+        Installation
+      </h3>
     </Base>
   )
 }
