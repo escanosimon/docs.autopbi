@@ -1,12 +1,12 @@
 import Base from '@/components/base'
 import React from 'react'
 
-const Page = () => {
+const Scan = () => {
   return (
     <Base crumbs={
       [
-        {name: "Getting Started", url: "/getting-started"},
-        {name: "Installation"}
+        {name: "Features", url: "/features"},
+        {name: "Bulk Scan"}
       ]
     }>
       Bruh
@@ -14,4 +14,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default Scan

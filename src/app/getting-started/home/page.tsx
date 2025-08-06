@@ -8,7 +8,9 @@ const Home = () => {
         {name: "Getting Started", url: "/getting-started"},
         {name: "What is AutoPBI?"}
       ]
-    }>Bruh</Base>
+    }>
+      Bruh
+    </Base>
   )
 }
 
