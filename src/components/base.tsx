@@ -14,6 +14,7 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
 import React from "react";
+import { Button } from "./ui/button";
 
 interface BaseProps {
   crumbs: {
@@ -28,38 +29,42 @@ export default function Base({ crumbs, children }: BaseProps) {
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
-          <SidebarTrigger className="-ml-1" />
-          <Separator
-            orientation="vertical"
-            className="mr-2 data-[orientation=vertical]:h-4"
-          />
-          <Breadcrumb>
-            <BreadcrumbList>
-              {
-                crumbs.map((crumb, index) => {
-                  if (index < crumbs.length - 1) {
-                    return (
-                      <React.Fragment key={index}>
-                        <BreadcrumbItem className="hidden md:block">
-                          <BreadcrumbLink href={crumb.url || "#"}>
-                            {crumb.name}
-                          </BreadcrumbLink>
+        <header className="flex justify-between h-16 shrink-0 items-center gap-2 border-b px-4">
+          <div className="flex items-center gap-2">
+            <SidebarTrigger className="-ml-1" />
+            <Separator
+              orientation="vertical"
+              className="mr-2 data-[orientation=vertical]:h-4"
+            />
+            <Breadcrumb>
+              <BreadcrumbList>
+                {
+                  crumbs.map((crumb, index) => {
+                    if (index < crumbs.length - 1) {
+                      return (
+                        <React.Fragment key={index}>
+                          <BreadcrumbItem className="hidden md:block">
+                            <BreadcrumbLink href={crumb.url || "#"}>
+                              {crumb.name}
+                            </BreadcrumbLink>
+                          </BreadcrumbItem>
+                          <BreadcrumbSeparator className="hidden md:block" />
+                        </React.Fragment>
+                      )
+                    } else {
+                      return (
+                        <BreadcrumbItem key={index} className="hidden md:block">
+                          <BreadcrumbPage>{crumb.name}</BreadcrumbPage>
                         </BreadcrumbItem>
-                        <BreadcrumbSeparator className="hidden md:block" />
-                      </React.Fragment>
-                    )
-                  } else {
-                    return (
-                      <BreadcrumbItem key={index} className="hidden md:block">
-                        <BreadcrumbPage>{crumb.name}</BreadcrumbPage>
-                      </BreadcrumbItem>
-                    )
-                  }
-                })
-              }
-            </BreadcrumbList>
-          </Breadcrumb>
+                      )
+                    }
+                  })
+                }
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
+
+          <Button className="justify-self-end-safe">Download</Button>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">

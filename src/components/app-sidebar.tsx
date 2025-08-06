@@ -23,16 +23,16 @@ const data = {
   versions: ["1.0.0"],
   navMain: [
     {
-      title: "Getting Started",
-      url: "/getting-started",
+      title: "Introduction",
+      url: "/introduction",
       items: [
         {
-          title: "Home",
-          url: "/getting-started/home",
+          title: "What is AutoPBI?",
+          url: "/introduction/home",
         },
         {
           title: "Installation",
-          url: "/getting-started/installation",
+          url: "/introduction/installation",
         },
       ],
     },
@@ -91,15 +91,15 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const pathName = usePathname();
 
   return (
-    <Sidebar {...props}>
-      <SidebarHeader>
+    <Sidebar className="p-4" {...props}>
+      <SidebarHeader className="border border-b-0 rounded-lg rounded-b-none">
         <VersionSwitcher
           versions={data.versions}
           defaultVersion={data.versions[0]}
         />
         <SearchForm />
       </SidebarHeader>
-      <SidebarContent>
+      <SidebarContent className="border border-t-0 rounded-lg rounded-t-none">
         {/* We create a SidebarGroup for each parent. */}
         {data.navMain.map((item) => (
           <SidebarGroup key={item.title}>

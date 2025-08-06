@@ -1,12 +1,12 @@
 import Base from '@/components/base'
 import React from 'react'
 
-const Home = () => {
+const Page = () => {
   return (
     <Base crumbs={
       [
-        {name: "Getting Started", url: "/getting-started"},
-        {name: "What is AutoPBI?"}
+        {name: "Introduction", url: "/introduction"},
+        {name: "Installation"}
       ]
     }>
       Bruh
@@ -14,4 +14,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Page
