@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react"
 
 import { SearchForm } from "@/components/search-form"
@@ -14,132 +16,70 @@ import {
   SidebarMenuItem,
   SidebarRail,
 } from "@/components/ui/sidebar"
+import { usePathname } from "next/navigation"
 
 // This is sample data.
 const data = {
-  versions: ["1.0.1", "1.1.0-alpha", "2.0.0-beta1"],
+  versions: ["1.0.0"],
   navMain: [
     {
       title: "Getting Started",
-      url: "#",
+      url: "/getting-started",
       items: [
+        {
+          title: "Home",
+          url: "/getting-started/home",
+        },
         {
           title: "Installation",
-          url: "#",
-        },
-        {
-          title: "Project Structure",
-          url: "#",
+          url: "/getting-started/installation",
         },
       ],
     },
     {
-      title: "Building Your Application",
-      url: "#",
+      title: "Features",
+      url: "/features",
       items: [
         {
-          title: "Routing",
-          url: "#",
-        },
-        {
-          title: "Data Fetching",
-          url: "#",
-          isActive: true,
-        },
-        {
-          title: "Rendering",
-          url: "#",
-        },
-        {
-          title: "Caching",
-          url: "#",
-        },
-        {
-          title: "Styling",
-          url: "#",
-        },
-        {
-          title: "Optimizing",
-          url: "#",
-        },
-        {
-          title: "Configuring",
-          url: "#",
-        },
-        {
-          title: "Testing",
-          url: "#",
-        },
-        {
           title: "Authentication",
-          url: "#",
+          url: "/features/authentication",
         },
         {
-          title: "Deploying",
-          url: "#",
+          title: "Bulk Publish",
+          url: "/features/publish",
         },
         {
-          title: "Upgrading",
-          url: "#",
+          title: "Bulk Download",
+          url: "/features/download",
         },
         {
-          title: "Examples",
-          url: "#",
+          title: "Bulk Delete",
+          url: "/features/delete",
+        },
+        {
+          title: "Bulk Clone",
+          url: "/features/clone",
+        },
+        {
+          title: "Bulk Scan",
+          url: "/features/scan",
+        },
+        {
+          title: "Bulk Refresh",
+          url: "/features/refresh",
+        },
+        {
+          title: "Bulk Takeover",
+          url: "/features/takeover",
         },
       ],
     },
     {
-      title: "API Reference",
-      url: "#",
+      title: "Development",
+      url: "/development",
       items: [
         {
           title: "Components",
-          url: "#",
-        },
-        {
-          title: "File Conventions",
-          url: "#",
-        },
-        {
-          title: "Functions",
-          url: "#",
-        },
-        {
-          title: "next.config.js Options",
-          url: "#",
-        },
-        {
-          title: "CLI",
-          url: "#",
-        },
-        {
-          title: "Edge Runtime",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Architecture",
-      url: "#",
-      items: [
-        {
-          title: "Accessibility",
-          url: "#",
-        },
-        {
-          title: "Fast Refresh",
-          url: "#",
-        },
-        {
-          title: "Next.js Compiler",
-          url: "#",
-        },
-        {
-          title: "Supported Browsers",
-          url: "#",
-        },
-        {
-          title: "Turbopack",
           url: "#",
         },
       ],
@@ -148,6 +88,8 @@ const data = {
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const pathName = usePathname();
+
   return (
     <Sidebar {...props}>
       <SidebarHeader>
@@ -166,7 +108,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               <SidebarMenu>
                 {item.items.map((item) => (
                   <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton asChild isActive={item.isActive}>
+                    <SidebarMenuButton asChild isActive={item.url == pathName}>
                       <a href={item.url}>{item.title}</a>
                     </SidebarMenuButton>
                   </SidebarMenuItem>

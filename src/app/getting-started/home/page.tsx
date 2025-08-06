@@ -3,7 +3,12 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <Base>Bruh</Base>
+    <Base crumbs={
+      [
+        {name: "Getting Started", url: "/getting-started"},
+        {name: "What is AutoPBI?"}
+      ]
+    }>Bruh</Base>
   )
 }
 

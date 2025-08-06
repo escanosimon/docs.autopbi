@@ -13,12 +13,17 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import React from "react";
 
-export default function Base({
-  children,
-}: Readonly<{
+interface BaseProps {
+  crumbs: {
+    name: string,
+    url?: string
+  }[];
   children: React.ReactNode;
-}>) {
+}
+
+export default function Base({ crumbs, children }: BaseProps) {
   return (
     <SidebarProvider>
       <AppSidebar />
@@ -31,15 +36,28 @@ export default function Base({
           />
           <Breadcrumb>
             <BreadcrumbList>
-              <BreadcrumbItem className="hidden md:block">
-                <BreadcrumbLink href="#">
-                  Building Your Application
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator className="hidden md:block" />
-              <BreadcrumbItem>
-                <BreadcrumbPage>Data Fetching</BreadcrumbPage>
-              </BreadcrumbItem>
+              {
+                crumbs.map((crumb, index) => {
+                  if (index < crumbs.length - 1) {
+                    return (
+                      <React.Fragment key={index}>
+                        <BreadcrumbItem className="hidden md:block">
+                          <BreadcrumbLink href={crumb.url || "#"}>
+                            {crumb.name}
+                          </BreadcrumbLink>
+                        </BreadcrumbItem>
+                        <BreadcrumbSeparator className="hidden md:block" />
+                      </React.Fragment>
+                    )
+                  } else {
+                    return (
+                      <BreadcrumbItem key={index} className="hidden md:block">
+                        <BreadcrumbPage>{crumb.name}</BreadcrumbPage>
+                      </BreadcrumbItem>
+                    )
+                  }
+                })
+              }
             </BreadcrumbList>
           </Breadcrumb>
         </header>
