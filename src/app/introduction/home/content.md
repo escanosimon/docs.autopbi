@@ -1,6 +1,6 @@
 # What is AutoPBI?
 
-AutoPBI is a powerful desktop application that automates bulk tasks that you cannot perform in Power BI Desktop and Power BI Service. It was developed by Simon Escaño to streamline Power BI workflows and save time for data professionals.
+AutoPBI is a desktop application that automates bulk tasks that you cannot perform in Power BI Desktop and Power BI Service. It was developed to streamline Power BI workflows and save time for data professionals.
 
 ## Key Capabilities
 
