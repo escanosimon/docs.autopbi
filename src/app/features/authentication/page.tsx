@@ -50,7 +50,7 @@ const Authentication = async () => {
                   alt={`Carousel image ${index + 1}`}
                   width={800}
                   height={400}
-                  className="w-full h-auto object-cover rounded-md"
+                  className="w-full h-auto object-cover rounded-sm"
                   priority={index === 0} // Optimize loading for the first image
                 />
               </div>

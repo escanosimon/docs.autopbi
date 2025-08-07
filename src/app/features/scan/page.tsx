@@ -38,7 +38,7 @@ const Scan = async () => {
         {name: "Bulk Scan"}
       ]
     }>
-      <Carousel className="w-full max-w-2xl mx-auto mb-4 border rounded-md shadow-lg">
+      <Carousel className="w-full max-w-2xl mx-auto mb-4">
         <CarouselContent>
           {images.map((src, index) => (
             <CarouselItem key={index}>
@@ -48,7 +48,7 @@ const Scan = async () => {
                   alt={`Carousel image ${index + 1}`}
                   width={800}
                   height={400}
-                  className="w-full h-auto object-cover rounded-md"
+                  className="w-full h-auto object-cover rounded-sm"
                   priority={index === 0}
                 />
               </div>
