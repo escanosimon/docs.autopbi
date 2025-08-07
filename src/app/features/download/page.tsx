@@ -27,7 +27,7 @@ const Download = async () => {
         {name: "Bulk Download"}
       ]
     }>
-      <div className="prose dark:prose-invert prose-sm prose-pre:bg-muted prose-pre:text-muted-foreground prose-pre:text-lg prose-neutral prose-headings:font-medium prose-headings:text-primary !max-w-none">
+      <div className="prose dark:prose-invert prose-strong:text-secondary prose-sm prose-pre:bg-muted prose-pre:text-muted-foreground prose-pre:text-lg prose-neutral prose-headings:font-medium prose-headings:text-primary !max-w-none">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeHighlight, rehypeRaw]}>
