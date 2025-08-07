@@ -8,7 +8,7 @@ import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
 
-const Authentication = async () => {
+const PopupSystem = async () => {
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
   const markdownPath = path.join(__dirname, 'content.md');
@@ -17,8 +17,8 @@ const Authentication = async () => {
   return (
     <Base crumbs={
       [
-        {name: "Features", url: "/features"},
-        {name: "Authentication"}
+        {name: "Development", url: "/development"},
+        {name: "Popup System"}
       ]
     }>
       <div className="prose dark:prose-invert prose-sm prose-pre:text-lg prose-neutral prose-headings:font-medium prose-headings:text-primary !max-w-none">
@@ -32,4 +32,4 @@ const Authentication = async () => {
   )
 }
 
-export default Authentication
+export default PopupSystem

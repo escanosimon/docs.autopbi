@@ -21,7 +21,7 @@ const Installation = async () => {
         {name: "Installation"}
       ]
     }>
-      <div className="prose prose-sm prose-pre:text-lg prose-neutral prose-headings:font-medium prose-headings:text-primary !max-w-none">
+      <div className="prose dark:prose-invert prose-sm prose-pre:text-lg prose-neutral prose-headings:font-medium prose-headings:text-primary !max-w-none">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeHighlight, rehypeRaw]}>

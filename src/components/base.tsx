@@ -29,7 +29,7 @@ export default function Base({ crumbs, children }: BaseProps) {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <SidebarInset>
+      <SidebarInset className="h-screen">
         <header className="flex justify-between h-16 shrink-0 items-center gap-2 border-b px-4">
           <div className="flex items-center gap-2">
             <SidebarTrigger className="-ml-1" />
@@ -66,10 +66,10 @@ export default function Base({ crumbs, children }: BaseProps) {
           </div>
 
           <Button className="justify-self-end-safe">
-            <Link href="https://github.com/escanosimon/AutoPBI/releases/">Download AutoPBI</Link>
+            <Link href="https://github.com/escanosimon/AutoPBI/releases/" className="text-white">Download AutoPBI</Link>
           </Button>
         </header>
-        <main className="flex flex-col p-6 sm:p-6 md:p-8 lg:p-12">
+        <main className="flex flex-col p-6 sm:p-6 md:p-8 lg:p-12 overflow-y-scroll">
           {children}
         </main>
       </SidebarInset>

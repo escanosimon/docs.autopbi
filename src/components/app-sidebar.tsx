@@ -78,8 +78,20 @@ const data = {
       url: "/development",
       items: [
         {
-          title: "Components",
-          url: "#",
+          title: "Tech Stack",
+          url: "/development/tech-stack",
+        },
+        {
+          title: "Adding Features",
+          url: "/development/adding-features",
+        },
+        {
+          title: "UI Components",
+          url: "/development/ui-components",
+        },
+        {
+          title: "Popup System",
+          url: "/development/popup-system",
         },
       ],
     },
