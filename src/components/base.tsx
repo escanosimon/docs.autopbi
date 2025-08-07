@@ -16,6 +16,7 @@ import {
 import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { ModeToggle } from "./mode-toggle";
 
 interface BaseProps {
   crumbs: {
@@ -65,9 +66,12 @@ export default function Base({ crumbs, children }: BaseProps) {
             </Breadcrumb>
           </div>
 
-          <Button className="justify-self-end-safe">
-            <Link href="https://github.com/escanosimon/AutoPBI/releases/" className="text-white">Download AutoPBI</Link>
-          </Button>
+          <div className="flex items-center gap-2">
+            <ModeToggle />
+            <Button className="justify-self-end-safe">
+              <Link href="https://github.com/escanosimon/AutoPBI/releases/" className="text-white">Download AutoPBI</Link>
+            </Button>
+          </div>
         </header>
         <main className="flex flex-col p-6 sm:p-6 md:p-8 lg:p-12 overflow-y-scroll">
           {children}
