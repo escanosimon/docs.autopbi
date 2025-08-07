@@ -14,6 +14,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
+import Logo from "./logo"
 
 export function VersionSwitcher({
   versions,
@@ -33,9 +34,7 @@ export function VersionSwitcher({
               size="lg"
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
-              <div className="bg-sidebar-primary text-white flex aspect-square size-8 items-center justify-center rounded-lg">
-                <GalleryVerticalEnd className="size-4" />
-              </div>
+              <Logo />
               <div className="flex flex-col gap-0.5 leading-none">
                 <span className="font-medium">AutoPBI</span>
                 <span className="">v{selectedVersion}</span>

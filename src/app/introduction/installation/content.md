@@ -35,7 +35,7 @@ Before installing AutoPBI, ensure you have the following:
 ## First Launch
 
 - The application will start and display the main interface
-- You'll need to log in with your Microsoft Power BI account (see [Authentication](../features/authentication.md))
+- You'll need to log in with your Microsoft Power BI account (see [Authentication](../features/authentication/))
 - The application will automatically load your accessible workspaces and reports
 
 ## Troubleshooting

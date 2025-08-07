@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/sidebar";
 import { VersionSwitcher } from "@/components/version-switcher";
 import { usePathname } from "next/navigation";
+import { BadgeQuestionMark, CircleUserRound, CodeXml, Copy, Cuboid, Download, HandHelping, ListPlus, MonitorDown, PictureInPicture2, RefreshCw, ScanSearch, Trash, Upload } from "lucide-react";
 
 // This is sample data.
 const data = {
@@ -28,10 +29,12 @@ const data = {
         {
           title: "What is AutoPBI?",
           url: "/introduction/home",
+          icon: BadgeQuestionMark
         },
         {
           title: "Installation",
           url: "/introduction/installation",
+          icon: MonitorDown
         },
       ],
     },
@@ -42,34 +45,42 @@ const data = {
         {
           title: "Authentication",
           url: "/features/authentication",
+          icon: CircleUserRound
         },
         {
           title: "Bulk Publish",
           url: "/features/publish",
+          icon: Upload
         },
         {
           title: "Bulk Download",
           url: "/features/download",
+          icon: Download
         },
         {
           title: "Bulk Delete",
           url: "/features/delete",
+          icon: Trash
         },
         {
           title: "Bulk Clone",
           url: "/features/clone",
+          icon: Copy
         },
         {
           title: "Bulk Scan",
           url: "/features/scan",
+          icon: ScanSearch
         },
         {
           title: "Bulk Refresh",
           url: "/features/refresh",
+          icon: RefreshCw
         },
         {
           title: "Bulk Takeover",
           url: "/features/takeover",
+          icon: HandHelping
         },
       ],
     },
@@ -80,18 +91,22 @@ const data = {
         {
           title: "Tech Stack",
           url: "/development/tech-stack",
+          icon: CodeXml
         },
         {
           title: "Adding Features",
           url: "/development/adding-features",
+          icon: ListPlus
         },
         {
           title: "UI Components",
           url: "/development/ui-components",
+          icon: Cuboid
         },
         {
           title: "Popup System",
           url: "/development/popup-system",
+          icon: PictureInPicture2
         },
       ],
     },
@@ -120,7 +135,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                 {item.items.map((item) => (
                   <SidebarMenuItem key={item.title}>
                     <SidebarMenuButton asChild isActive={item.url == pathName}>
-                      <a href={item.url}>{item.title}</a>
+                      <a className="flex" href={item.url}>
+                        <item.icon></item.icon>
+                        <p>{item.title}</p>
+                      </a>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
                 ))}
