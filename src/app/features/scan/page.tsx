@@ -38,7 +38,7 @@ const Scan = async () => {
         {name: "Bulk Scan"}
       ]
     }>
-      <Carousel className="w-full max-w-2xl mx-auto">
+      <Carousel className="w-full max-w-2xl mx-auto mb-4 border rounded-md shadow-lg">
         <CarouselContent>
           {images.map((src, index) => (
             <CarouselItem key={index}>
