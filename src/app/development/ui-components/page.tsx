@@ -7,6 +7,12 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "UI Components | AutoPBI Documentation",
+  description: "Learn about the UI components and design patterns used in AutoPBI.",
+};
 
 const UIComponents = async () => {
   const __filename = fileURLToPath(import.meta.url);
@@ -21,8 +27,8 @@ const UIComponents = async () => {
         {name: "UI Components"}
       ]
     }>
-      <div className="prose dark:prose-invert prose-sm prose-pre:text-lg prose-neutral prose-headings:font-medium prose-headings:text-primary !max-w-none">
-        <ReactMarkdown 
+      <div className="prose dark:prose-invert prose-sm prose-pre:bg-muted prose-pre:text-muted-foreground prose-pre:text-lg prose-neutral prose-headings:font-medium prose-headings:text-primary !max-w-none">
+        <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeHighlight, rehypeRaw]}>
             {markdownContent}
