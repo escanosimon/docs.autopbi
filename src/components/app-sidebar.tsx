@@ -136,7 +136,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <SidebarMenuItem key={item.title}>
                     <SidebarMenuButton asChild isActive={item.url == pathName}>
                       <a className="flex" href={item.url}>
-                        <item.icon></item.icon>
+                        <item.icon className="text-primary"></item.icon>
                         <p>{item.title}</p>
                       </a>
                     </SidebarMenuButton>
