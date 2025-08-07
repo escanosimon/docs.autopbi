@@ -1,3 +1,3 @@
-const Typography = require("@tailwindcss/typography");
+import Typography from "@tailwindcss/typography";
 
-module.exports = Typography;
+export default Typography;
