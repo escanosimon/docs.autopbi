@@ -69,7 +69,7 @@ export default function Base({ crumbs, children }: BaseProps) {
           <div className="flex items-center gap-2">
             <ModeToggle />
             <Button className="justify-self-end-safe">
-              <Link href="https://github.com/escanosimon/AutoPBI/releases/" className="text-white">Download AutoPBI</Link>
+              <Link href="https://github.com/simon-escano/AutoPBI/releases/" className="text-white">Download AutoPBI</Link>
             </Button>
           </div>
         </header>

@@ -21,7 +21,7 @@ Before installing AutoPBI, ensure you have the following:
 ## Download and Install AutoPBI
 
 1. **Download the Application**
-   - Download the portable ZIP file from the [releases page](https://github.com/escanosimon/AutoPBI/releases/)
+   - Download the portable ZIP file from the [releases page](https://github.com/simon-escano/AutoPBI/releases/)
 
 2. **Extract the Files**
    - Extract the downloaded ZIP file to a folder of your choice
